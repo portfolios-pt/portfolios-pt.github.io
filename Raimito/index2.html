@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Raimito Matas | Portfolios</title>
+<!-- <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+<style>
+h2{
+color:#ff2d57;
+text-decoration:underline;
+}
+.grid{
+display:flex;
+flex-direction:rows;
+flex-wrap:wrap;
+//border:1px solid white;
+//border-radius:10px;
+padding:10px;
+width:350px;
+margin-left:10px;
+}
+.grid img{
+border:0.5px solid white;
+//margin-bottom:10px;
+
+width:170px;
+height:170px;
+justify-content:space-between;
+}
+
+body{
+background-color:black;
+color:white;
+
+}
+.icons{
+display:flex;
+flex-direction:row;
+position:relative;
+margin-left:auto;
+right:20px;
+}
+
+
+.icon{
+
+width:20px;
+height:20px;
+margin-left:10px;
+}
+
+
+.p{
+font-weight:bold;
+font-size:17px;
+margin-left:15px;
+}
+.sp{
+color:#ff3d57;
+}
+
+
+.header{
+display:flex;
+flex-direction:row;
+border-bottom:2px solid #ff3d57;
+//justify-content:center;
+align-items:center;
+position:fixed;
+width:100%;
+top:-5px;
+z-index:99;
+background-color:black;
+}
+.pfp{
+border-radius:50%;
+
+}
+#dff{
+margin-top:100px;
+}
+.intro{
+display:flex;
+flex-direction:column;
+align-items:center;
+margin-top:50px;
+margin-bottom:20px;
+}
+p{
+text-align:center;
+//text-indent:10px;
+line-height:1.7;
+}
+h1{
+text-align:center;
+
+}
+.proj{
+display:flex;
+flex-direction:column;
+align-items:center;
+border:2px solid white;
+border-top-right-radius:30px;
+border-top-left-radius:30px;
+border-bottom-left-radius:20px;
+border-bottom-right-radius:20px;
+padding:10px;
+width:80%;
+text-indent:5px;
+margin-bottom:60px;
+}
+.proj img{
+width:90%;
+height:170px;
+position:relative;
+top:10px;
+}
+</style>
+</head>
+<body>
+<div class="header">
+<img src="pfp.jpg" width="50px" height="50px" class="pfp" ><p class="p">Raimito Matas</p><div 
+class="icons"> <img 
+class="icon" onclick="insta()" src="insta.png"><img class="icon" onclick="wsp()" src="zapp.png"><img class="icon" 
+src="discord.png" onclick="dc()"></div>
+</div>
+
+<div class="intro" id="dff">
+<img src="pfp.png" width="200px" height="200px" style="border-radius:50%; 
+box-shadow:0px 0px 15px white;">
+<h1>Sobre mim</h1>
+<p>Sou apaixonado por tecnologia e tudo que envolve criatividade digital.
+Passo horas jogando Minecraft e Roblox, explorando e criando mundos únicos.
+Também programo, desenvolvendo scripts e pequenas aplicações.
+Gosto de aprender novas linguagens e transformar ideias em código.
+Curto desafios, pixels, códigos e tudo que estimula a mente!
+</p>
+</div>
+
+<div class="intro">
+<h1>Meus Gostos</h1>
+<h2>Programação</h2>
+<div class="grid">
+<img src="coding.png">
+<img src="coding2.png">
+<img src="coding3.png">
+<img src="coding4.png">
+</div>
+</div>
+<div class="intro">
+
+<h2>Música</h2>
+<div class="grid">
+<img src="msc1.jpg">
+<img src="msc2.jpg">
+<img src="msc3.jpg">
+<img src="msc4.jpg">
+</div>
+</div>
+<div class="intro">
+
+<h2>Animes</h2>
+<div class="grid">
+<img src="anime.png">
+<img src="anime2.png">
+<img src="anime3.png">
+<img src="anime4.png">
+</div>
+</div>
+
+
+
+
+<div class="intro">
+<h1>Meus Projetos</h1>
+<br><br><br>
+<div class="proj">
+<img src="ngllink.png">
+<p>NGLLink alternativo com mais personalizações e com um visual mais elegante</p>
+</div>
+<div class="proj">
+<img src="burp.png">
+<p>BurpSuite Terminal. Um programa que permite a captura de pacotes pela emulação de 
+proxy mas isso tudo pelo terminal usando regex para substituir o action do form</p>
+</div>
+<div class="proj">
+<img src="sjc.png">
+<p>Um site informativo sobre a escola São José de Cluny com o intuito de dar a conhecer mais sobre a escola para os interessados</p>
+</div>
+
+
+<script>
+function insta(){
+alert("Você será redirecionado(a).");
+window.location.href="https://www.instagram.com/oscarraimito?igsh=MXVrZzRqanAxdjJhZw%3D%3D&utm_source=qr";
+}
+function wsp(){
+alert("Você será redirecionado(a).");
+window.location.href="https://wa.me/244930662522?text=Oi, eu vim pelo teu site.";
+}
+function dc(){
+alert("Discord Indisponível :(");
+}
+</script>
+</body>
+</html>
