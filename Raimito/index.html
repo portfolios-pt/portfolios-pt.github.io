@@ -6,10 +6,35 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>Raimito Matas | Portfolios</title>
+<link rel="icon" href="profile.jpg">
+<meta name="author" content="Raimito Matas (Figueratti)">
+<meta name="description" content="Seja Bem vindo ao meu Portfólio e não esite em me contactar">
 <!-- <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
 <style>
+.toFade{
+opacity:0;
+transform: translateY(20px);
+transition:1s ease;
+}
+.aparecer{
+opacity:0;
+transition:3s ease;
+}
+
+.toFade--visibel{
+opacity:1;
+transform:translateY(0);
+}
+
+.aparecer--visibel{
+opacity:1;
+}
+
+
+
+
 h2{
 color:#ff2d57;
 text-decoration:underline;
@@ -123,22 +148,21 @@ top:10px;
 </style>
 </head>
 <body>
-<div class="header">
-<img src="pfp.jpg" width="50px" height="50px" class="pfp" ><p class="p">Raimito Matas</p><div 
+<div class="header" id="header">
+<img src="profile.jpg" width="45px" height="45px" class="pfp" ><p class="p">Raimito Matas (Figueratti)</p><div 
 class="icons"> <img 
 class="icon" onclick="insta()" src="insta.png"><img class="icon" onclick="wsp()" src="zapp.png"><img class="icon" 
 src="discord.png" onclick="dc()"></div>
 </div>
 
-<div class="intro" id="dff">
-<img src="pfp.png" width="200px" height="200px" style="border-radius:50%; 
-box-shadow:0px 0px 15px white;">
+<div class="intro aparecer" id="dff">
+<img src="profile.jpg" width="200px" height="200px" style="border-radius:50%;">
 <h1>Sobre mim</h1>
 <p>Programador por hobbie, curioso por natureza. Gosto de entender como as coisas funcionam, mas também sei a hora de fechar o notebook. Sempre aberto a boas conversas e novas amizades.</p>
 </div>
 
-<div class="intro">
-<h1>Meus Gostos</h1>
+<div class="intro toFade">
+<h1>Meus Interesses</h1>
 <h2>Programação</h2>
 <div class="grid">
 <img src="coding.png">
@@ -147,7 +171,7 @@ box-shadow:0px 0px 15px white;">
 <img src="coding4.png">
 </div>
 </div>
-<div class="intro">
+<div class="intro toFade">
 
 <h2>Música</h2>
 <div class="grid">
@@ -171,19 +195,19 @@ box-shadow:0px 0px 15px white;">
 
 
 
-<div class="intro">
+<div class="intro toFade">
 <h1>Meus Projetos</h1>
 <br><br><br>
-<div class="proj">
+<div class="proj toFade">
 <img src="ngllink.png">
 <p>NGLLink alternativo com mais personalizações e com um visual mais elegante</p>
 </div>
-<div class="proj">
+<div class="proj toFade">
 <img src="burp.png">
 <p>BurpSuite Terminal. Um programa que permite a captura de pacotes pela emulação de 
 proxy mas isso tudo pelo terminal usando regex para substituir o action do form</p>
 </div>
-<div class="proj">
+<div class="proj toFade">
 <img src="sjc.png">
 <p>Um site informativo sobre a escola São José de Cluny com o intuito de dar a conhecer mais sobre a escola para os interessados</p>
 </div>
@@ -194,13 +218,43 @@ function insta(){
 alert("Você será redirecionado(a).");
 window.location.href="https://www.instagram.com/oscarraimito?igsh=MXVrZzRqanAxdjJhZw%3D%3D&utm_source=qr";
 }
+
+window.addEventListener("load",function(){
+document.querySelector(".aparecer").classList.add("aparecer--visibel");
+window.location.href="#header";
+});
+
 function wsp(){
 alert("Você será redirecionado(a).");
-window.location.href="https://wa.me/244930662522?text=Oi, eu vim pelo teu site.";
+window.location.href="https://wa.me/244921257650?text=Oi, eu vim pelo seu site.";
 }
 function dc(){
 alert("Discord Indisponível :(");
 }
+const divs=document.querySelectorAll(".toFade");
+document.addEventListener("scroll",function(){
+
+divs.forEach(div =>{
+if(isInView(div)){
+div.classList.add("toFade--visibel");
+}else{
+div.classList.remove("toFade--visibel");
+}
+});
+
+});
+
+
+function isInView(element){
+const rect= element.getBoundingClientRect();
+return (rect.bottom > 0 && rect.top < ( window.innerHeight - 150 || document.documentElement.clientHeight - 150))
+
+
+}
+
+
+
+
 </script>
 </body>
 </html>
